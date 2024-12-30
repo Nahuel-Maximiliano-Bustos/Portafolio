@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Nahuel M. Bustos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button id="menu-button" aria-label="Abrir menú">
+            &#9776; <!-- Ícono de menú -->
+        </button>
+    </header>
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="resources/profile.png" alt="Foto de perfil" class="profile-pic">
+            <h2>Nahuel M. Bustos</h2>
+            <p>Programador & Desarrollador Web</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about" class="menu-link active">Sobre mí</a></li>
+                <li><a href="#skills" class="menu-link">Competencias</a></li>
+                <li><a href="#work" class="menu-link">Proyectos</a></li>
+                <li><a href="#contact" class="menu-link">Contacto</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/nahu2112" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100009436349831" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/nahuel-maximiliano-bustos-b5b977288/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/Nahuel-Maximiliano-Bustos" target="_blank"><i class="fab fa-github"></i></a></li>
+            </ul>
+            <p>&copy; 2025 Nahuel M. Bustos</p>
+        </footer>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección: Sobre mí -->
+        <section id="about" class="section">
+            <h2 class="section-title">Sobre mí</h2>
+            <p class="section-description">
+                ¡Hola! soy Nahuel, estudiante de Ingeniería en Sistemas con 25 años, apasionado por la tecnología y el diseño.
+            </p>
+        
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="resources/coding-924920_1280.jpg" alt="Imagen 1" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Lo que hago</h3>
+                        <p class="card-description">
+                            Mi trabajo combina conocimientos de programación, diseño gráfico, análisis web y multimedial para desarrollar soluciones integrales y funcionales. Mi especialización en Python me permite crear herramientas innovadoras y eficientes, adaptadas a las necesidades de cada cliente. 
+                            Además, mis habilidades en diseño garantizan que los proyectos no solo sean técnicamente robustos, sino también visualmente atractivos. También tengo experiencia en optimizar la presencia digital de empresas y proyectos, ofreciendo estrategias efectivas y personalizadas para cada objetivo.
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="resources/data-5606639_1280.jpg" alt="Imagen 2" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Cómo trabajo</h3>
+                        <p class="card-description">
+                            Mi enfoque multidisciplinario me permite abordar los proyectos desde una perspectiva tanto creativa como técnica. 
+                            Trabajo de manera colaborativa con los clientes para entender sus necesidades y traducirlas en soluciones que generen impacto. Cada detalle es cuidadosamente planificado para garantizar resultados únicos y de alta calidad. 
+                            Ya sea desarrollando código, diseñando interfaces o analizando datos, me esfuerzo por crear productos que conecten con los usuarios y cumplan los objetivos establecidos. Mi compromiso con la excelencia y la innovación está presente en cada proyecto que realizo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Competencias -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Competencias</h2>
+            <div class="skills-grid">
+                <!-- Herramientas -->
+                <div class="skill-item">
+                    <div class="icon-container">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <i class="fab fa-css3-alt skill-icon"></i>
+                        <i class="fab fa-js skill-icon"></i>
+                        <i class="fab fa-python skill-icon"></i>
+                    </div>
+                    <h3>Herramientas</h3>
+                    <p>Manejo tecnologías como HTML, CSS, JavaScript y Python, además de herramientas gráficas como Photoshop e Illustrator.</p>
+                </div>
+                <!-- Habilidades Blandas -->
+                <div class="skill-item">
+                    <div class="icon-container">
+                        <i class="fas fa-handshake skill-icon"></i>
+                        <i class="fas fa-users skill-icon"></i>
+                        <i class="fas fa-comments skill-icon"></i>
+                    </div>
+                    <h3>Habilidades Blandas</h3>
+                    <p>Trabajo en equipo, comunicación efectiva y una actitud proactiva para resolver problemas y superar desafíos.</p>
+                </div>
+                <!-- Experiencia y Logros -->
+                <div class="skill-item">
+                    <div class="icon-container">
+                        <i class="fas fa-trophy skill-icon"></i>
+                        <i class="fas fa-project-diagram skill-icon"></i>
+                        <i class="fas fa-chart-line skill-icon"></i>
+                    </div>
+                    <h3>Experiencia y Logros</h3>
+                    <p>He trabajado en proyectos innovadores optimizando procesos y creando soluciones funcionales que impactaron positivamente a clientes.</p>
+                </div>
+                <!-- Filosofía Profesional -->
+                <div class="skill-item">
+                    <div class="icon-container">
+                        <i class="fas fa-lightbulb skill-icon"></i>
+                        <i class="fas fa-heart skill-icon"></i>
+                        <i class="fas fa-graduation-cap skill-icon"></i>
+                    </div>
+                    <h3>Filosofía Profesional</h3>
+                    <p>Me apasiona aprender y compartir conocimientos. Siempre busco la manera de innovar y aportar valor con cada proyecto que desarrollo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Proyectos -->
+        <section id="work" class="section">
+            <h2 class="section-title">Proyectos</h2>
+            <p class="section-description">
+                Aquí encontrarás una muestra de los trabajos que he realizado, combinando tecnología y creatividad. ¡Explora y descubre lo que puedo hacer!
+            </p>
+            <div class="work-grid">
+                <div class="work-item">
+                    <div class="project-card">
+                        <img src="resources/portada gym.png" alt="Proyecto 1" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <h3 class="project-title">Proyecto Final</h3>
+                                <p class="project-description">Proyecto desarrollado como cierre del curso en la UTN Buenos Aires, integrando diseño visual, análisis estratégico y soluciones web funcionales para resolver un desafío práctico. Haz clic en la lupa para explorarlo.</p>
+                                <a href="https://proyecto-final-sigma-two.vercel.app/" target="_blank" class="project-button">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="project-card">
+                        <img src="resources/portada blog.png" alt="Proyecto 2" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <h3 class="project-title">Blog Artístico</h3>
+                                <p class="project-description">Creación de un blog para exhibir los trabajos artísticos de una estudiante de la Universidad Provincial de Córdoba, destacando diseño visual y funcionalidad para compartir su obra de manera atractiva. Haz clic en la lupa para explorarlo.</p>
+                                <a href="https://blog-de-arte.vercel.app/" target="_blank" class="project-button">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Sección: Contacto -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-description">¿Listo para trabajar juntos o tienes alguna consulta? ¡Escríbeme y hagamos realidad tus ideas! Estoy aquí para ayudarte.</p>
+            <form action="#" method="POST" class="contact-form">
+                <input type="text" name="from_name" placeholder="Tu nombre" required class="form-input">
+                <input type="email" name="reply_to" placeholder="Tu correo electrónico" required class="form-input">
+                <textarea name="message" rows="5" placeholder="Tu mensaje" required class="form-textarea"></textarea>
+                <button type="submit" class="form-button">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
