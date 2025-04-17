@@ -1,0 +1,709 @@
+/* Estilos base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('resources/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transition: none; /* Animación de despliegue */
+}
+
+.sidebar.active {
+    left: 0; /* Muestra el menú cuando está activo */
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+#menu-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000; /* Para que esté encima del contenido */
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu-link:hover,
+.menu-link.active {
+    background-color: white;
+    color: #b0332a;
+    border-radius: 20px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #b0332a;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+main {
+    margin-left: 250px;
+    padding: 20px;
+    background: rgba(105, 102, 102, 0.808);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Estilo general de las secciones */
+.section {
+    margin-bottom: 300px; /* Espaciado entre secciones */
+    padding-top: 120px; /* Espaciado interno encima del contenido */
+    position: relative; /* Para posicionar el pseudo-elemento */
+}
+
+/* Agregar línea separadora antes de cada sección excepto la primera */
+.section:not(:first-of-type)::before {
+    content: ''; /* Crea un pseudo-elemento */
+    display: block;
+    width: 100%; /* Línea ocupa todo el ancho */
+    height: 1px; /* Grosor de la línea */
+    background-color: rgba(255, 255, 255, 0.849); /* Línea blanca semitransparente */
+    position: absolute; /* Posiciona la línea dentro de la sección */
+    top: 0; /* Ubica la línea al inicio de la sección */
+    left: 0; /* Alinea la línea con el borde izquierdo */
+}
+
+/* Subrayado decorativo para los títulos de sección */
+.section-title {
+    position: relative; /* Necesario para posicionar el subrayado */
+    font-size: 28px; /* Tamaño del texto */
+    text-align: center; /* Centrar título */
+    color: white; /* Texto blanco */
+    margin-bottom: 50px; /* Espacio inferior */
+}
+
+.section-title::after {
+    content: ''; /* Pseudo-elemento para la línea */
+    position: absolute;
+    bottom: -5px; /* Ajustar debajo del texto */
+    left: 50%; /* Centramos el subrayado */
+    transform: translateX(-50%); /* Corregimos la posición centrada */
+    width: 60px; /* Largo de la línea */
+    height: 3px; /* Grosor de la línea */
+    background-color: #b0332a; /* Color rojo personalizado */
+    border-radius: 3px; /* Bordes redondeados */
+}
+
+/*Sobre mi*/
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Card Styles */
+.card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Invert order for even cards */
+.card:nth-child(even) {
+    flex-direction: row-reverse;
+    /* Invert order for even cards */
+}
+
+/* Card Image */
+.card-image {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+    flex: 1;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.card-button:hover {
+    background-color: #494949;
+}
+
+/* Estilos para la sección "Competencias" */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.skill-item {
+    background: rgba(32, 32, 32, 0.616);
+    padding: 80px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    gap: 15px;
+}
+
+.skill-item:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, #f8f8f8, #eaeaea); /* Fondo blanco al hover */
+}
+
+/* Íconos dentro de cada tarjeta */
+.icon-container {
+    display: flex; /* Usar flexbox para organizar íconos */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 15px; /* Espaciado entre los íconos */
+    margin-bottom: 20px; /* Espaciado con respecto al título y descripción */
+}
+
+.skill-icon {
+    font-size: 40px; /* Tamaño de los íconos */
+    color: white; /* Color inicial */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Cambiar color de íconos al hover de la tarjeta */
+.skill-item:hover .skill-icon {
+    color: #000; /* Negro cuando el fondo es blanco */
+}
+
+/* Hover en iconos individuales */
+.icon-container .skill-icon:hover {
+    transform: scale(1.2); /* Aumentar tamaño */
+    color: #b0332a; /* Rojo al pasar el mouse */
+}
+
+.skill-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.skill-item p {
+    font-size: 14px;
+    color: white;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.skill-item:hover h3,
+.skill-item:hover p {
+    color: black; /* Negro para texto cuando el fondo de la tarjeta está blanco */
+}
+
+
+/* Estilos para la sección "Mi trabajo" */
+/* Contenedor principal */
+.project-card {
+    position: relative;
+    width: 500px; /* Tamaño máximo para mantener consistencia */
+    height: 400px; /* Define una altura fija */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen se ajuste sin deformarse */
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.623);
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #b0332a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #f05640;
+}
+
+/* Animación al pasar el mouse */
+.project-card:hover .project-overlay {
+    transform: rotateX(0deg); /* La tarjeta blanca rota hacia adelante y queda visible */
+}
+
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columnas iguales */
+    gap: 20px;
+}
+
+/* Estilos para la sección "Contacto" */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background: none;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.404);
+    color: white;
+    border-radius: 0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #b0332a;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+form button:hover {
+    background-color: #333;
+    transform: translateY(-2px); 
+}
+
+form h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    /* Sidebar */
+    .sidebar {
+        left: -250px; /* Menú oculto inicialmente */
+        transition: left 0.3s ease; /* Animación de desplazamiento */
+        z-index: 999;
+    }
+
+    .sidebar.active {
+        left: 0; /* Despliegue desde la izquierda */
+    }
+
+    /* El contenido principal no se mueve */
+    main {
+        margin-left: 0; /* Sin desplazamiento */
+        z-index: 1;
+    }
+
+    #menu-button {
+        display: block; /* Mostrar el botón */
+    }
+
+    /* Perfil en sidebar */
+    .profile {
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    /* Menú */
+    nav ul {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .menu-link {
+        padding: 8px 15px;
+    }
+
+    /* Social links */
+    .social-links {
+        margin-top: 10px;
+    }
+
+    .social-links li {
+        margin: 0 8px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    /* Main */
+    main {
+        margin-left: 0;
+        padding: 10px;
+        background: rgba(105, 102, 102, 0.808);
+    }
+
+    /* Secciones */
+    section {
+        margin: 20px 0;
+        padding: 20px;
+    }
+
+    /* Ajustar la sección "Sobre mí" */
+    .cards-container {
+        display: flex;
+        flex-direction: column; /* Apilar elementos */
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column; /* Apilar contenido dentro de la tarjeta */
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 300px; /* Ajustar tamaño de la imagen */
+        height: auto;
+        position: relative;
+    }
+
+    .card-content {
+        text-align: center;
+    }
+
+    .card-title, .card-description {
+        font-size: 1.2rem;
+    }
+
+    .card-button {
+        padding: 10px 15px;
+    }
+
+    /* Skills grid */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Mostrar una sola columna */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .skill-item {
+        padding: 40px;
+        text-align: center;
+    }
+
+    /* Tarjetas de proyectos */
+    .work-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Mostrar las tarjetas en una sola columna */
+        gap: 20px;
+        padding: 20px;
+        overflow: visible; /* Asegurarse de que las tarjetas sean visibles */
+    }
+
+    .project-card {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+    }
+    
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-overlay {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.623);
+        cursor: pointer;
+    }
+
+    /* Ocultar overlay inicialmente en móviles */
+    .project-card .project-overlay {
+        display: none;
+    }
+
+    .project-card.active .project-overlay {
+        display: flex;
+    }
+
+    .project-button {
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Formulario */
+    form {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    form input, form textarea, form button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 15px;
+    } 
+
+    form h2 {
+        font-size: 20px;
+    }
+}
+
+/* Responsividad para pantallas más pequeñas, hasta 480px */
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+
+    .menu-link {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .card-title, .card-description {
+        font-size: 1.2rem;
+    }
+
+    .card-button {
+        padding: 8px 12px;
+    }
+
+    .card-image {
+        max-width: 90%;
+    }
+
+    .skill-item {
+        padding: 30px;
+    }
+
+    .project-card {
+        max-width: 100%;
+        height: 100%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 100%;
+        display: block; /* Asegura visibilidad en pantallas pequeñas */
+        position: relative;
+    }
+
+    .project-button {
+        padding: 8px 12px;
+    }
+
+    /* Asegura que el texto de las tarjetas se ajuste */
+    .card-content {
+        text-align: center;
+        font-size: 0.5rem;
+    }
+
+    /* Evitar el uso de flex-direction: row-reverse en pantallas pequeñas */
+    .card:nth-child(even) {
+        flex-direction: column; /* No invertir el orden en pantallas pequeñas */
+    }
+    .project-overlay {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.623);
+        cursor: pointer;
+    }
+
+    /* Ocultar overlay inicialmente en móviles */
+    .project-card .project-overlay {
+        display: none;
+    }
+
+    .project-card.active .project-overlay {
+        display: flex;
+    }
+}
+
+
+/* Responsividad para pantallas más grandes (mayores a 768px) */
+@media (min-width: 769px) {
+    .card:nth-child(even) {
+        flex-direction: row-reverse; /* Invertir el orden solo en pantallas más grandes */
+    }
+    .project-card:hover .project-overlay {
+        opacity: 1;
+    }
+    .project-card {
+        max-width: 400px; /* Aumentar tamaño en pantallas grandes */
+        height: 300px;
+    }
+    #menu-button {
+        display: none; /* Oculta el botón en pantallas pequeñas */
+    }
+
+    main {
+        margin-left: 250px; /* Margen fijo para el menú visible */
+    }
+}
